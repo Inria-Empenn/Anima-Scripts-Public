@@ -134,7 +134,7 @@ if args.second_step is True:
     call(command)
 
     command = [animaApplyTransformSerie, "-i", iccImage, "-t", brainImagePrefix + "_nl_tr.xml", "-g", brainImage, "-o",
-               brainImagePrefix + "_brainMask.nrrd", "-n", "nearest"]
+               brainMask, "-n", "nearest"]
     call(command)
 
     command = [animaMaskImage, "-i", brainImage, "-m", brainMask, "-o", maskedBrain]
